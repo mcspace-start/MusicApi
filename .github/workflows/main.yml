@@ -1,0 +1,17 @@
+name: Node.js API  
+on:  
+  push:  
+    branches:  
+      - main  
+  
+jobs:  
+  build:  
+    name: Build and Run API  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout repository code  
+        uses: actions/checkout@v2  
+      - name: Install dependencies  
+        run: npm install  
+      - name: Start API server  
+        run: npm run start
