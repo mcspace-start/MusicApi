@@ -1,0 +1,16 @@
+name: 构建  
+on: 
+  push:
+    branches: 
+      - main  
+jobs:  
+  deploy:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - uses: actions/checkout@main  
+      - name: Install dependencies  
+        run: npm install  
+      - name: Start API server  
+        run: npm start
+
+
